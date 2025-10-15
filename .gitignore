@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# TypeScript compiled output
+dist/
+
+# Optional environment variables
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# VS Code workspace settings
+.vscode/
