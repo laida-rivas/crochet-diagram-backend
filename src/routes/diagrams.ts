@@ -17,6 +17,9 @@ router.post('/addDiagram', (req: Request, res: Response) => {
   if (!title || !base || !rowsOrRounds || !Array.isArray(rowsOrRounds)) {
     return res.status(400).json({ error: 'Invalid diagram payload' });
   }
+  if (base !== 'row' && base !== 'round') {
+    return res.status(400).json({ error: 'Invalid base type. Must be "row" or "round".' });
+  }
 
   const newDiagram: Diagram = {
     id: Date.now(),
